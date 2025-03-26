@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梦幻星海探索 - 3D艺术设计</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="title-container">
+        <h1>向阳小学 小学组设计展示</h1>
+        <p>指导老师：张影</p>
+        <p>参赛学生：艾可</p>
+        <p class="project-name">设计作品：《梦幻星海探索》</p>
+    </div>
+
+    <div class="controls">
+        <button id="changeColor">变换颜色</button>
+        <button id="addParticles">添加粒子</button>
+        <button id="changeShape">变换形状</button>
+        <button id="rotateSpeed">旋转速度</button>
+        <button id="resetView">重置视角</button>
+    </div>
+
+    <div id="info">
+        <span id="shape-name">黑洞</span>
+    </div>
+
+    <!-- Three.js库 -->
+    <script src="js/lib/three.min.js"></script>
+    <script src="js/lib/OrbitControls.js"></script>
+    
+    <!-- 工具函数 -->
+    <script src="js/utils/controls.js"></script>
+    <script src="js/utils/particles.js"></script>
+    <script src="js/utils/logger.js"></script>
+    
+    <!-- 模型 -->
+    <script src="js/models/blackhole.js"></script>
+    <script src="js/models/spaceship.js"></script>
+    <script src="js/models/spacehouse.js"></script>
+    <script src="js/models/controls.js"></script>
+
+    <!-- 主程序 -->
+    <script src="js/main.js"></script>
+</body>
+</html>

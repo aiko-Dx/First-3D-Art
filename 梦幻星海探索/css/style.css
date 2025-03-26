@@ -1,0 +1,151 @@
+body { 
+    margin: 0; 
+    overflow: hidden; 
+    font-family: "Microsoft YaHei", sans-serif;
+    background-color: #080820;
+}
+
+.controls {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Microsoft YaHei", sans-serif;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.title-container {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 100;
+    color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.title-container h1 {
+    margin: 5px 0;
+    font-size: 22px;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.7);
+}
+
+.title-container p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.project-name {
+    font-size: 18px;
+    color: #FFD700;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+}
+
+#info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 18px;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: opacity 0.3s ease;
+}
+
+canvas {
+    display: block;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .controls {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        top: auto;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+    
+    button {
+        margin: 2px;
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+    
+    .title-container h1 {
+        font-size: 18px;
+    }
+    
+    .title-container p {
+        font-size: 14px;
+    }
+    
+    .project-name {
+        font-size: 16px;
+    }
+    
+    #info {
+        bottom: 60px;
+    }
+}
+
+/* 加载动画 */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #080820;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.loader-inner {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top-color: #9966FF;
+    border-bottom-color: #00FFFF;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
